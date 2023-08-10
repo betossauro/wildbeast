@@ -1,0 +1,126 @@
+.content {
+    grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.col-wide {
+    grid-column: 1/-1;
+}
+
+.col-long {
+    grid-row: span 2;
+    
+}
+
+.imagem {
+    align-self: end;
+    width: 100%;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    letter-spacing: -0.005rem;
+    color: rgba(0, 0, 0, .7);
+}
+
+.informacoes p + p {
+    margin-top: 30px;
+}
+
+.titulo {
+    color: #b07dfd;
+}
+
+.titulo h1 {
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.titulo span {
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+.caracteristicas {
+    display: flex;
+    align-items: flex-start;
+}
+
+.caracteristicas > div {
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(135deg, #8844ee, #b07dfd);
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px 0px rgba(44, 44, 44, .15);
+    position: relative;
+}
+
+.caracteristicas > div:first-child {
+    margin-right: 30px;
+}
+
+.caracteristicas span {
+    display: block;
+    color: #b07dfd;
+}
+
+.numero {
+    font-size: 3rem;
+    line-height: 1;
+    margin: 10px auto;
+}
+
+.rotulo {
+    background: white;
+    border-radius: 0 0 4px 4px;
+    padding: 5px 0;
+    position: relative;
+    top: 2px;
+}
+
+.destaque {
+    font-size: 0.875rem;
+    color: #b07dfd;
+    max-width: 16rem;
+}
+
+.citacao, .atributos {
+    align-self: start;
+    padding: 30px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #8844ee, #b07dfd);
+    box-shadow: 1px 2px 4px 0px rgba(44, 44, 44, .15);
+}
+
+.citacao p {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.atributos li {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.125rem;
+    padding: 15px;
+}
+
+.atributos li + li {
+    border-top: 2px solid #b07dfd;
+}
+
+@media (max-width: 600px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
